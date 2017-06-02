@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="js/paper-full.js"></script>
+    <script type="text/paperscript" canvas="myCanvas">
+// grid of circles
+    // for (var x = 10; x < 1900; x+=60) {
+    //   for (var y = 10; y <1000; y+=60) {
+    //   var myCircle = new Path.Circle(new Point(x, y), 10);
+    //   myCircle.fillColor = new Color((y/x), (y/x), (x/y));
+    //   }
+    // }
+// random circles of random size
+    for (var i = 0; i < 500; i++) {
+      var myCircle = new Path.Circle(new Point(Math.random()*1900, Math.random()*1000), Math.random()/Math.random());
+      myCircle.fillColor = new Color(Math.random(), Math.random(), Math.random());
+    }
+
+
+  </script>
+  </head>
+  <body>
+    <canvas id="myCanvas" resize></canvas>
+
+  </body>
+</html>
